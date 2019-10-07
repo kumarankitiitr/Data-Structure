@@ -9,6 +9,10 @@ class queue:
         return self.items.pop()
     def size(self):
         return len(self.items)
+    def front(self):
+        return self.items[0]
+    def rear(self):
+        return self.items[len(self.items)-1]
     def printqueue(self):
         for i in self.items:
             print(i, end = ' ')
