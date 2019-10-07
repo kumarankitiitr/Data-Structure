@@ -10,8 +10,12 @@ class queue:
     def size(self):
         return len(self.items)
     def front(self):
+        if(self.items == []):
+            return "queue is empty\n"
         return self.items[0]
     def rear(self):
+        if(self.items == []):
+            return "queue is empty\n"
         return self.items[len(self.items)-1]
     def printqueue(self):
         for i in self.items:
@@ -27,3 +31,5 @@ q.enqueue(3)    # 3 4 9 8
 q.printqueue() # 3 4 9 8
 q.dequeue()     # dequeue 8
 q.printqueue() # 3 4 9
+print(q.front())
+print(q.rear())
